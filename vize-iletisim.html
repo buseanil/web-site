@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Yengeç Restoran - İletişim</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url(wp7879327.webp);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      header {
+        background-color: rgba(243, 232, 37, 0.4);
+        color: rgb(235, 120, 193);
+        padding: 20px;
+        text-align: center;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      nav {
+        background-color: rgba(243, 232, 37, 0.3);
+        padding: 10px;
+        text-align: center;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      nav a {
+        color: rgb(235, 120, 193);
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      main {
+        margin-top: 20px;
+        padding: 30px;
+        text-align: center;
+        position: relative;
+      }
+
+      h2 {
+        color: rgb(235, 120, 193);
+        margin-bottom: 30px;
+      }
+
+      form {
+        background-color: #ffffff;
+        border: 2px solid #f3e825;
+        padding: 20px;
+        width: 50%;
+        margin: 0 auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        position: relative;
+        z-index: 2;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: rgb(235, 120, 193);
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      input[type="submit"] {
+        background-color: #f3e825;
+        color: rgb(235, 120, 193);
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #fff176;
+      }
+
+      #message-box {
+        margin-top: 30px;
+        background-color: rgba(255, 255, 255, 0.95);
+        border-left: 5px solid rgb(235, 120, 193);
+        padding: 20px;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 8px;
+        color: #333;
+        font-size: 18px;
+        display: none;
+      }
+
+      footer {
+        text-align: center;
+        padding: 15px;
+        color: rgb(255, 255, 255);
+        background-color: rgba(243, 232, 37, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Yengeç Restoran - İletişim</h1>
+    </header>
+
+    <nav>
+      <a href="vize-index.html">Anasayfa</a>
+      <a href="vize-menu.html">Menü</a>
+      <a href="vize-iletisim.html">İletişim</a>
+      <a href="vize-hakkimizda.html">Hakkımızda</a>
+    </nav>
+
+    <main>
+      <h2>Bize Ulaşın</h2>
+      <form
+        id="contactForm"
+        action="#"
+        method="post"
+        onsubmit="return showMessage(event)"
+      >
+        <label for="name">Adınız:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">E-posta:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Telefon:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="message">Mesajınız:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <input type="submit" value="Gönder" />
+      </form>
+
+      <div id="message-box"></div>
+    </main>
+
+    <footer>
+      <p>Adres: Bikini Kasabası, Yengeç Caddesi No:1</p>
+      <p>Telefon: 0212 123 45 67</p>
+      <p>© 2025 Yengeç Restoran. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script>
+      function showMessage(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const message = document.getElementById("message").value;
+
+        const messageBox = document.getElementById("message-box");
+
+        messageBox.innerHTML = `
+          <strong>Bizi tercih ettiğiniz için teşekkürler, ${name}!</strong><br><br>
+          İstek ve şikayetleriniz bizim için değerli. En yakın zamanda tekrar görüşmek dileğiyle!<br>
+          <strong>Telefon:</strong> ${phone}<br>
+          <strong>E-posta:</strong> ${email}<br>
+          <strong>Mesajınız:</strong> ${message}
+        `;
+
+        messageBox.style.display = "block";
+
+        document.getElementById("contactForm").reset();
+
+        return false;
+      }
+    </script>
+  </body>
+</html>

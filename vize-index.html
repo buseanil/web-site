@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Yengeç Restoran - Anasayfa</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url("wp7879327.webp");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      header {
+        background-color: rgba(243, 232, 37, 0.4);
+        color: rgb(235, 120, 193);
+        padding: 20px;
+        text-align: center;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      nav {
+        background-color: rgba(243, 232, 37, 0.3);
+        padding: 10px;
+        text-align: center;
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      nav a {
+        color: rgb(235, 120, 193);
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      main {
+        margin-top: 20px;
+        padding: 30px;
+        text-align: center;
+      }
+
+      h2 {
+        color: rgb(235, 120, 193);
+      }
+
+      p {
+        color: #333;
+        font-size: 18px;
+      }
+
+      section {
+        margin: 20px 0;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.85);
+        border-radius: 8px;
+      }
+
+      h3 {
+        color: rgb(235, 120, 193);
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      li {
+        margin: 10px 0;
+        font-size: 18px;
+      }
+
+      .testimonial {
+        margin: 15px 0;
+        padding: 10px;
+        background-color: rgba(235, 120, 193, 0.1);
+        border-left: 4px solid rgb(235, 120, 193);
+      }
+
+      a.button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: rgb(235, 120, 193);
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        margin-top: 15px;
+      }
+
+      a.button:hover {
+        background-color: rgb(180, 90, 140);
+      }
+
+      footer {
+        text-align: center;
+        padding: 15px;
+        color: rgb(255, 255, 255);
+        background-color: rgba(243, 232, 37, 0.3);
+      }
+
+      footer p {
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+      }
+
+      #muzikKontrol {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        background-color: rgb(235, 120, 193);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      #muzikKontrol:hover {
+        background-color: rgb(180, 90, 140);
+      }
+
+      #popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+
+      #popup button {
+        padding: 20px 40px;
+        font-size: 24px;
+        background-color: rgb(235, 120, 193);
+        color: white;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      #popup button:hover {
+        background-color: rgb(180, 90, 140);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="popup">
+      <button id="girisBtn">Hoş Geldiniz - Siteye Giriş</button>
+    </div>
+
+    <header>
+      <h1>Yengeç Restoran - Anasayfa</h1>
+    </header>
+    <nav>
+      <a href="vize-index.html">Anasayfa</a>
+      <a href="vize-menu.html">Menü</a>
+      <a href="vize-iletisim.html">İletişim</a>
+      <a href="vize-hakkimizda.html">Hakkımızda</a>
+    </nav>
+    <main>
+      <section>
+        <h2>Hoş Geldiniz!</h2>
+        <p>
+          Yengeç Restoran'da harika yemekler sizi bekliyor! Menü sayfamıza göz
+          atın ve lezzetli burgerlerimizi keşfedin.
+        </p>
+      </section>
+
+      <section>
+        <h3>Restoranımız Hakkında</h3>
+        <p>
+          Yengeç Restoran, taze deniz ürünleri ve zengin menüsüyle ünlüdür.
+          Lezzetli yemeklerimiz, temiz ve samimi ortamımızda sizleri bekliyor.
+          Güler yüzlü personelimizle en iyi deneyimi yaşamanız için buradayız!
+        </p>
+      </section>
+
+      <section>
+        <h3>Öne Çıkan Menülerimiz</h3>
+        <ul>
+          <li>
+            <strong>Lezzetli Yengeç Burger</strong> - Taze yengeç etinden
+            yapılan, özel soslu burger.
+          </li>
+          <li>
+            <strong>Deniz Ürünleri Tabağı</strong> - Çeşitli deniz ürünlerinin
+            bir arada sunulduğu zengin bir tabak.
+          </li>
+          <li>
+            <strong>Fırın Yengeç</strong> - Özel baharatlarla fırınlanmış
+            yengeçler, akşam yemeğiniz için mükemmel bir seçenek.
+          </li>
+          <li>
+            <strong>Günlük Deniz Salatası</strong> - Taze meyve ve sebzelerle
+            hazırlanmış hafif bir salata.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Müşteri Yorumları</h3>
+        <div class="testimonial">
+          <p>
+            <strong>Ahmet Y.</strong>: "Yengeç Restoran'da geçirdiğim en güzel
+            akşam yemeğiydi. Menüler harika, personel çok ilgilendi."
+          </p>
+        </div>
+        <div class="testimonial">
+          <p>
+            <strong>Selin K.</strong>: "Burası, taze deniz ürünleri sevenler
+            için bir cennet. Yengeç burgeri mutlaka denemelisiniz!"
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h3>Rezervasyon Yapın</h3>
+        <p>
+          Restoranımızda yerinizi ayırtmak için hemen iletişime geçin! Telefon
+          numaramız veya iletişim formu aracılığıyla kolayca rezervasyon
+          yapabilirsiniz.
+        </p>
+        <a href="vize-iletisim.html" class="button">İletişime Geç</a>
+      </section>
+
+      <button id="muzikKontrol">Müziği Durdur</button>
+    </main>
+
+    <footer>
+      <p>Adres: Bikini Kasabası, Yengeç Caddesi No:1</p>
+      <p>Telefon: 0212 123 45 67</p>
+      <p>© 2025 Yengeç Restoran. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <audio id="muzik" loop>
+      <source src="SpongeBob.mp3" type="audio/mpeg" />
+      Tarayıcınız ses etiketini desteklemiyor.
+    </audio>
+
+    <script>
+      const muzik = document.getElementById("muzik");
+      const buton = document.getElementById("muzikKontrol");
+      const popup = document.getElementById("popup");
+      const girisBtn = document.getElementById("girisBtn");
+
+      girisBtn.addEventListener("click", () => {
+        muzik.play();
+        popup.style.display = "none";
+      });
+
+      buton.addEventListener("click", () => {
+        if (muzik.paused) {
+          muzik.play();
+          buton.textContent = "Müziği Durdur";
+        } else {
+          muzik.pause();
+          buton.textContent = "Müziği Başlat";
+        }
+      });
+    </script>
+  </body>
+</html>
